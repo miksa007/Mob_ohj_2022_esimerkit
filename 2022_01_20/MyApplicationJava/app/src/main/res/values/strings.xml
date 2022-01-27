@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Application Java</string>
+    <string name="hello">Terve maailma</string>
+    <string name="vihje">Syötä nimesi</string>
+    <string name="nappula">Paina nappulaa!</string>
+    <string name="nappula2">Heitä viesti uuteen activityyn!</string>
 </resources>
