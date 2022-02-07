@@ -16,11 +16,13 @@ public class TaskukirjaViewModel extends AndroidViewModel {
 
     public TaskukirjaViewModel (Application application) {
         super(application);
+
         mRepository = new TaskukirjaRepository(application);
         mAlltaskukirjas = mRepository.getAllTaskukirjas();
     }
 
     LiveData<List<Taskukirja>> getAllTaskukirjas() {
+        Log.d("TaskukirjaViewModel", "Get All tapahtui");
         return mAlltaskukirjas;
     }
 

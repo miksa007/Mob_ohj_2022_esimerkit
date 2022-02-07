@@ -11,7 +11,8 @@ import java.util.List;
 @Dao
 public interface TaskukirjaDao {
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    //@Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert
     void insert(Taskukirja taskukirja);
 
     @Query("DELETE FROM taskukirja_table")

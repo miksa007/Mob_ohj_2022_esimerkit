@@ -12,7 +12,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {Taskukirja.class}, version = 1, exportSchema = false)
+@Database(entities = {Taskukirja.class}, version = 2, exportSchema = false)
 
 public abstract class TaskukirjaRoomDatabase extends RoomDatabase {
 
@@ -24,6 +24,7 @@ public abstract class TaskukirjaRoomDatabase extends RoomDatabase {
             Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
     static TaskukirjaRoomDatabase getDatabase(final Context context) {
+        Log.d("TaskukirjaRoomDatabase", "INSTANCE selvityksessä");
         if (INSTANCE == null) {
             synchronized (TaskukirjaRoomDatabase.class) {
                 if (INSTANCE == null) {

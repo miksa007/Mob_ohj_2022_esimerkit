@@ -12,6 +12,7 @@ public class TaskukirjaRepository {
     private LiveData<List<Taskukirja>> mAllTaskukirjas;
 
     TaskukirjaRepository(Application application) {
+        Log.d("TaskukirjaRepository", "konstruktori");
         TaskukirjaRoomDatabase db = TaskukirjaRoomDatabase.getDatabase(application);
         mTaskukirjaDao = db.taskukirjaDao();
         mAllTaskukirjas = mTaskukirjaDao.getNumberOrderedTaskukirjas();
@@ -20,6 +21,19 @@ public class TaskukirjaRepository {
     // Room executes all queries on a separate thread.
     // Observed LiveData will notify the observer when the data has changed.
     LiveData<List<Taskukirja>> getAllTaskukirjas() {
+        Log.d("TaskukirjaRepository", "getAll tapahtui");
+        /*
+        int Debug=1;
+
+        if(Debug==1){
+            int ind=1;
+            for (Taskukirja tasku: mAllTaskukirjas.) {
+                Log.d("TaskukirjaRepository", ""+ind+". "+tasku.toString());
+
+            }
+        }
+        */
+
         return mAllTaskukirjas;
     }
 

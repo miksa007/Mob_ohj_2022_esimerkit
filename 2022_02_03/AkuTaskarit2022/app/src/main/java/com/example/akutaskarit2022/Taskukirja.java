@@ -33,5 +33,13 @@ public class Taskukirja {
     public String getName() {
         return this.mName;
     }
+
+    @Override
+    public String toString() {
+        return "Taskukirja{" +
+                "mNumber='" + mNumber + '\'' +
+                ", mName='" + mName + '\'' +
+                '}';
+    }
 }
 
