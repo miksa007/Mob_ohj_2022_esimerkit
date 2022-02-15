@@ -46,4 +46,15 @@ public class TaskukirjaRepository {
         });
     }
 
+    public void deleteAll() {
+        TaskukirjaRoomDatabase.databaseWriteExecutor.execute(() -> {
+            mTaskukirjaDao.deleteAll();
+        });
+    }
+
+    public void deleteTaskukirja(Taskukirja taskukirja){
+        TaskukirjaRoomDatabase.databaseWriteExecutor.execute(()->{
+            mTaskukirjaDao.deleteTaskukirja(taskukirja);
+        });
+    }
 }

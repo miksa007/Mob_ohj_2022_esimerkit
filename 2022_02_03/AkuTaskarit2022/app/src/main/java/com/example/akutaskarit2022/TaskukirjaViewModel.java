@@ -30,4 +30,11 @@ public class TaskukirjaViewModel extends AndroidViewModel {
         Log.d("TaskukirjaViewModel", "Insert tapahtui");
         mRepository.insert(taskukirja);
     }
+
+    public void deleteAll(){
+        mRepository.deleteAll();
+    }
+    public void deleteTaskukirja(Taskukirja taskukirja){
+        mRepository.deleteTaskukirja(taskukirja);
+    }
 }

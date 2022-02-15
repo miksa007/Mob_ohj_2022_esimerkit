@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -41,6 +43,35 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(intent, NEW_WORD_ACTIVITY_REQUEST_CODE);
         });
 
+        Button buttonUusi=findViewById(R.id.buttonUusi);
+        buttonUusi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, NewTaskukirjaActivity.class);
+                startActivityForResult(intent, NEW_WORD_ACTIVITY_REQUEST_CODE);
+            }
+        });
+
+        Button buttonPoistaKaikki=findViewById(R.id.buttonPoistaKaikki);
+        buttonPoistaKaikki.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mTaskukirjaViewModel.deleteAll();
+            }
+        });
+
+        Button buttonPoistaYksi = findViewById(R.id.buttonpoistaAlkio);
+        buttonPoistaYksi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Taskukirja temp= adapter.getTaskukirja();
+                if(temp!=null){
+                    mTaskukirjaViewModel.deleteTaskukirja(temp);
+                }else{
+                    Log.d("miksan softa", "Ei poistettavaa taskukirjaa valittuna");
+                }
+            }
+        });
     }
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

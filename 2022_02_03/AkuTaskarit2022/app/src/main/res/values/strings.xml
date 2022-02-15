@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Aku Taskarit 2022</string>
     <string name="add_word">Lisää</string>
+    <string name="add_Button">Uusi...</string>
+    <string name="del_all_Button">Poista kaikki</string>
+    <string name="del_Button">Poista yksi</string>
+    <string name="info_button">Info</string>
 </resources>

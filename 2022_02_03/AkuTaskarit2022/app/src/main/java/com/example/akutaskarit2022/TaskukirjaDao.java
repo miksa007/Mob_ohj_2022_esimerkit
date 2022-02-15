@@ -2,6 +2,7 @@ package com.example.akutaskarit2022;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
@@ -20,5 +21,8 @@ public interface TaskukirjaDao {
 
     @Query("SELECT * FROM taskukirja_table ORDER BY number ASC")
     LiveData<List<Taskukirja>> getNumberOrderedTaskukirjas();
+
+    @Delete
+    void deleteTaskukirja(Taskukirja taskukirja);
 
 }
