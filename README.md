@@ -17,7 +17,7 @@ comp.cs.220 Mobile Programming examples
 * Project name: 
 * Descripton: Database in Firebase cloud
 
-## 124.2.2022
-* Project name: 
-* Descripton: ...
+## 24.2.2022
+* Project name: Intent example
+* Descripton: Testing differen intents
 
