@@ -21,3 +21,11 @@ comp.cs.220 Mobile Programming examples
 * Project name: Intent example
 * Descripton: Testing differen intents
 
+
+* Project name: Oikeudet - Permissions example
+* Descripton: Simple example shows only how to check permission for camera.
+* Full example: [https://github.com/android/permissions-samples/tree/main/RuntimePermissionsBasic](https://github.com/android/permissions-samples/tree/main/RuntimePermissionsBasic)
+
+## 10.3.2022
+* 
+
